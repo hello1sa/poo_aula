@@ -13,15 +13,19 @@ public class Q01 {
 		System.out.println("Insira seu texto: ");
 		String texto = teclado.nextLine();
 		String partes [] = texto.split(" ");
-		
+		// ["Teste","Helo","chaves"]v
+		int contador =0;
 		for (int i = 0; i < partes.length; i++) {
-
-			
+				
+			if(partes[i].length()>3 ||partes[i].equalsIgnoreCase("Oi") || partes[i].equalsIgnoreCase("Vai") || partes[i].equalsIgnoreCase("ser") ) {
+				contador++;
+			}
+		//	System.out.println(partes[i].length());
 		}
 		System.out.println("O número de caracteres é: ");
 	System.out.println(texto.length());
 	
-	System.out.println("O número de palavras é: ");
+	System.out.println("O número de palavras é: "+ contador);
 	
 	
 	}
